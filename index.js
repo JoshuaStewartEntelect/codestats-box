@@ -7,11 +7,11 @@ const {
 const { GistBox } = require('gist-box');
 const https = require('https');
 
-if (!GITHUB_TOKEN || !GIST_ID || !CODESTATS_USER) {
+if (!GH_TOKEN || !GIST_ID || !CODESTATS_USER) {
   throw Error('params error');
 }
 
-const box = new GistBox({ id:GIST_ID, token:GITHUB_TOKEN});
+const box = new GistBox({ id:GIST_ID, token:GH_TOKEN});
 const LEVEL_FACTOR = 0.025;
 https.get('https://codestats.net/api/users/' + CODESTATS_USER, (resp) => {
   let data = '';
