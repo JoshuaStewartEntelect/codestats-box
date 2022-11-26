@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const {
-  GIST_ID, GITHUB_TOKEN, CODESTATS_USER,
+  GIST_ID, GH_TOKEN, CODESTATS_USER,
 } = process.env;
 
 const { GistBox } = require('gist-box');
